@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\section::factory()->count(2)->create();
         \App\Models\student::factory()->count(2)->create();
         $this->call(userrolestable::class);
+        $this->call(reg::class);
     }
 }
