@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\clasec as ControllersClasec;
+use App\Http\Controllers\SectionController;
+use App\Http\Controllers\StudentController;
+use App\Models\clasec;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +20,43 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/student/index', [StudentController::class,'index'])->name('student.index');
+Route::get('/student/create', [StudentController::class,'create'])->name('Student.store');
+Route::post('/student/store' , [StudentController::class,'store'])->name('student.name');
+
+///////////Section
+
+
+Route::get('/Section/index', [SectionController::class,'index'])->name('Section.index');
+Route::get('/Section/create', [SectionController::class,'create'])->name('Section.store');
+Route::post('/Section/store' , [SectionController::class,'store'])->name('Section.create');
+
+///////////Class
+Route::get('/homepage', function () {
+    return view('layouts.homecomponent');
+})->middleware('auth')->name('home');
+
+Route::get('/clas/index', [ControllersClasec::class,'index'])->name('clas.index');
+Route::get('/clas/create', [ControllersClasec::class,'create'])->name('class.Store');
+Route::post('/clas/store' , [ControllersClasec::class,'store'])->name('class.create');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

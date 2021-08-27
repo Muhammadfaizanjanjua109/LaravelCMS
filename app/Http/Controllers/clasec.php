@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\clasec;
-use App\Models\section;
+use App\Models\clasec as ModelsClasec;
 use Illuminate\Http\Request;
 
-class SectionController extends Controller
+class clasec extends Controller
 {
-    //
-
     public function index()
     {
-        $section=section::all();
-        return view('section.index',compact('section'));
+        $class=ModelsClasec::all();
+        return view('class.index',compact('class'));
 
     }
 
@@ -25,8 +22,8 @@ class SectionController extends Controller
     */
      public function create()
     {
-        $clasec=clasec::all();
-        return view('section.create', compact('clasec'));
+        $class=ModelsClasec::all();
+        return view('class.create', compact('class'));
     //
 
     }
@@ -38,11 +35,10 @@ class SectionController extends Controller
          */
     public function store(Request $request)
     {
-        $stu = new section;
-        $stu->section_name =$request->section_name;
-        $stu->clasec_id =$request->clasec_id;
-
+        $stu = new ModelsClasec();
+        $stu->name =$request->name;
         $stu->save();
         return view('home');
     }
 }
+
