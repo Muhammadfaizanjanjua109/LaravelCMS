@@ -26,7 +26,7 @@ table, th, td ,tr {
         <tbody>
             @foreach ($class as $class)
                 <tr>
-             <td><a href="{{route('Section.index')}}"> {{$class->name}}</a></td>
+             <td><a href="{{route('class.show',$class->id)}}"> {{$class->name}}</a></td>
                 </tr>
                 @endforeach
 

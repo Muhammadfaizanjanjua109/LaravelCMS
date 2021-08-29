@@ -40,5 +40,11 @@ class clasec extends Controller
         $stu->save();
         return view('home');
     }
-}
 
+    public function show($id)
+    {
+            $class = ModelsClasec::find($id);
+            return view('class.classfullpage',compact('class'));
+
+    }
+}

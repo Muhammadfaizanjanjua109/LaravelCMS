@@ -22,6 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/student/index', [StudentController::class,'index'])->name('student.index');
+Route::get('/student/fullpage//{id}', [StudentController::class,'show'])->name('Student.show');
 Route::get('/student/create', [StudentController::class,'create'])->name('Student.store');
 Route::post('/student/store' , [StudentController::class,'store'])->name('student.name');
 
@@ -29,6 +30,7 @@ Route::post('/student/store' , [StudentController::class,'store'])->name('studen
 
 
 Route::get('/Section/index', [SectionController::class,'index'])->name('Section.index');
+Route::get('/Section/fullpage/{id}', [SectionController::class,'show'])->name('Section.show');
 Route::get('/Section/create', [SectionController::class,'create'])->name('Section.store');
 Route::post('/Section/store' , [SectionController::class,'store'])->name('Section.create');
 
@@ -38,6 +40,7 @@ Route::get('/homepage', function () {
 })->middleware('auth')->name('home');
 
 Route::get('/clas/index', [ControllersClasec::class,'index'])->name('clas.index');
+Route::get('/clas/fullpage/{id}', [ControllersClasec::class,'show'])->name('class.show');
 Route::get('/clas/create', [ControllersClasec::class,'create'])->name('class.Store');
 Route::post('/clas/store' , [ControllersClasec::class,'store'])->name('class.create');
 

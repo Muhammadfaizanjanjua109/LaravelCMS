@@ -45,4 +45,11 @@ class SectionController extends Controller
         $stu->save();
         return view('home');
     }
+
+    public function show($id)
+    {
+        $section = section::find($id);
+        return view('section.sectionfullpage',compact('section'));
+      //
+    }
 }
