@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 use App\Models\User;
+use App\Models\student;
+use App\Models\subject;
 use Illuminate\Database\Seeder;
 
 class reg extends Seeder
@@ -21,5 +23,8 @@ class reg extends Seeder
         $table->password=bcrypt(123456789);
         $table->role_id=2;
         $table->save();
+
+
+
     }
 }

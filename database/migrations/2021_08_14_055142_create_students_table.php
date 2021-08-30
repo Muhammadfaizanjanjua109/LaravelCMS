@@ -16,7 +16,7 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table)
         {
             Schema::dropIfExists('students');
-            $table->increments('id');
+            $table->id();
             $table->string('name',255);
             $table->string('father_name',255);
             $table->string('Adress',255);
