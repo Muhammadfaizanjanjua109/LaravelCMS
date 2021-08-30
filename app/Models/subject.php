@@ -12,7 +12,7 @@ class subject extends Model
 
     public function student()
     {
-        return $this->hasmany(student::class);
+        return $this->belongsToMany(student::class);
     }
 
 }

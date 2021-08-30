@@ -13,15 +13,16 @@ class CreateStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('students', function (Blueprint $table) {
+        Schema::create('students', function (Blueprint $table)
+        {
             Schema::dropIfExists('students');
             $table->increments('id');
             $table->string('name',255);
             $table->string('father_name',255);
             $table->string('Adress',255);
             $table->integer('CNIC');
-          $table->integer('section_id')->unsigned();
-            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');;
+            $table->integer('section_id')->unsigned();
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->timestamps();
         });
     }
