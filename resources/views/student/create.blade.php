@@ -44,10 +44,15 @@
                             <label class="col-md-4 control-label">Section </label>
                             <div class="col-md-8 inputGroupContainer">
                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><select name="section_id" id="Role_id">
-
+{{--
                                 @foreach ($section as $section)
                                 <option value="{{$section->id}}">{{$section->section_name}}</option>
+                                @endforeach --}}
+
+                                @foreach ($section as $section)
+                                <option value="{{$section->id}}">{{$section->name}}</option>
                                 @endforeach
+
 
                               </select></div>
                             </div>

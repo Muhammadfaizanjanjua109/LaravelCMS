@@ -28,6 +28,7 @@ class StudentFactory extends Factory
             'father_name' => $this->faker->address(),
             'CNIC' => $this->faker->numberBetween($int1=1,$int2=2151),
             'section_id'=>2,
+            'clasec_id'=>2,
 
         ];
     }

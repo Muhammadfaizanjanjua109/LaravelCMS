@@ -21,8 +21,14 @@ class student extends Model
         return $this->belongsTo(section::class);
     }
 
-    public function subject()
-    {
-        return $this->belongsToMany(subject::class,'student_subjects');
-    }
+
+    // public function clasec()
+    // {
+    //     return $this->belongsTo(clasec::class);
+    // }
+
+    // public function subject()
+    // {
+    //     return $this->belongsToMany(subject::class, 'student_subjects' );
+    // }
 }

@@ -18,12 +18,18 @@ class clasec extends Model
 
     public function students()
     {
-        return $this->hasMany('students');
+        return $this->hasMany(student::class);
     }
 
 
     public function section()
     {
         return $this->hasMany(section::class);
+    }
+
+
+    public function subject()
+    {
+        return $this->hasMany(subject::class);
     }
 }

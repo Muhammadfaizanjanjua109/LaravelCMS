@@ -23,6 +23,9 @@ class CreateStudentsTable extends Migration
             $table->integer('CNIC');
             $table->integer('section_id')->unsigned();
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
+
+            $table->integer('clasec_id')->unsigned();
+            $table->foreign('clasec_id')->references('id')->on('clasecs')->onDelete('cascade');
             $table->timestamps();
         });
     }

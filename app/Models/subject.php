@@ -15,4 +15,9 @@ class subject extends Model
         return $this->belongsToMany(student::class,'student_subjects');
     }
 
+    public function clasec()
+    {
+        return $this->belongsTo(clasec::class);
+    }
+
 }

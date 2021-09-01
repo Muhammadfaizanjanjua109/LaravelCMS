@@ -3,7 +3,10 @@
 use App\Http\Controllers\clasec as ControllersClasec;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\subjectController;
 use App\Models\clasec;
+use App\Models\subject;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +48,18 @@ Route::get('/clas/create', [ControllersClasec::class,'create'])->name('class.Sto
 Route::post('/clas/store' , [ControllersClasec::class,'store'])->name('class.create');
 
 
+
+
+
+
+///subjects
+Route::prefix('subject')->name('subject.')->group(function () {
+    Route::get('/index', [subjectController::class,'index'])->name('index');
+    Route::get('/fullpage/{id}', [subjectController::class,'show'])->name('show');
+    Route::get('/create', [subjectController::class,'create'])->name('Store');
+    Route::post('/store' , [subjectController::class,'store'])->name('create');
+
+});
 
 
 

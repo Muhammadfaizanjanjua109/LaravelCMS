@@ -23,6 +23,7 @@ class studentSubjectDataSeed extends Seeder
         $f->Adress = 'Po Box Dandot Tehsil Choa';
         $f->CNIC = '34456';
         $f->section_id = '2';
+        $f->clasec_id='1';
         $f->save();
 
         $d = new Student();
@@ -30,14 +31,19 @@ class studentSubjectDataSeed extends Seeder
         $f->father_name = 'Yasir Ahmed';
         $f->Adress = 'Po Box Dandot Tehsil Choa';
         $f->CNIC = '3456';
+        $f->clasec_id='2';
         $f->section_id = '2';
         $f->save();
 
 
         $f = new subject();
+        $f->name='islamiat';
+        $f->clasec_id='1';
         $f->save();
 
         $f = new subject();
+        $f->name='Urdu';
+        $f->clasec_id='2';
         $f->save();
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\clasec;
 use App\Models\section;
 use App\Models\student;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class StudentController extends Controller
     */
      public function create()
     {
-        $section=section::all();
+        $section = clasec::all();
         return view('student.create', compact('section'));
     //
 
@@ -44,6 +45,7 @@ class StudentController extends Controller
         $stu->Adress =$request->Adress;
         $stu->CNIC =$request->CNIC;
         $stu->section_id =$request->section_id;
+        $stu->clasec_id =2;
         $stu->save();
         return view('home');
     }
