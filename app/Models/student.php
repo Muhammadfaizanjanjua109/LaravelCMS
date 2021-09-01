@@ -22,13 +22,10 @@ class student extends Model
     }
 
 
-    // public function clasec()
-    // {
-    //     return $this->belongsTo(clasec::class);
-    // }
+    public function clasec()
+    {
+        return $this->belongsTo(clasec::class)->withDefault();
+    }
 
-    // public function subject()
-    // {
-    //     return $this->belongsToMany(subject::class, 'student_subjects' );
-    // }
+
 }

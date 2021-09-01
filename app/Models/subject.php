@@ -10,14 +10,10 @@ class subject extends Model
     use HasFactory;
 
 
-    public function student()
-    {
-        return $this->belongsToMany(student::class,'student_subjects');
-    }
 
     public function clasec()
     {
-        return $this->belongsTo(clasec::class);
+        return $this->belongsTo(clasec::class)->withDefault();
     }
 
 }

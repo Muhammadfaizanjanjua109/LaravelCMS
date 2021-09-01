@@ -16,7 +16,7 @@ class section extends Model
 
      public function clasec()
      {
-         return $this->belongsTo(clasec::class);
+         return $this->belongsTo(clasec::class)->withDefault();
      }
 
      public function student()

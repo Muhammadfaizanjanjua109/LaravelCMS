@@ -63,7 +63,6 @@ class subjectController extends Controller
     {
         //
         $subject = subject::find($id);
-
         return view('subject.subjectfullpage',compact('subject'));
     }
 
