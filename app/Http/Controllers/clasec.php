@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\clasec as ModelsClasec;
+use App\Models\section;
 use Illuminate\Http\Request;
 
 class clasec extends Controller
@@ -22,7 +23,7 @@ class clasec extends Controller
     */
      public function create()
     {
-        $class=ModelsClasec::all();
+        $class=ModelsClasec::with('student')->get('*');
         return view('class.create', compact('class'));
     //
 

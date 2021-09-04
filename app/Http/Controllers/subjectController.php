@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\clasec;
+use App\Models\student;
 use App\Models\subject;
 use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class subjectController extends Controller
 {
@@ -29,7 +31,9 @@ class subjectController extends Controller
      */
     public function create()
     {
-        //
+
+
+
         $class=clasec::all();
         return view('subject.create', compact('class'));
 
@@ -50,7 +54,7 @@ class subjectController extends Controller
         $stu->clasec_id =$request->clasec_id;
         $stu->save();
 
-        return view('home');
+        return view('layouts.homecomponent');
     }
 
     /**
@@ -62,8 +66,12 @@ class subjectController extends Controller
     public function show($id)
     {
         //
+
         $subject = subject::find($id);
         return view('subject.subjectfullpage',compact('subject'));
+
+
+
     }
 
     /**

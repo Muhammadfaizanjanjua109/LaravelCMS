@@ -31,6 +31,8 @@
         </tr>
     </thead>
 <tr>
+
+
 @foreach ($subject->clasec->section as $stu)
 @foreach ($stu->student as $faz)
     <td> {{$faz->id}}            </td>

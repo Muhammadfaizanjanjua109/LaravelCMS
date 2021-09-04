@@ -41,9 +41,8 @@ class SectionController extends Controller
         $stu = new section;
         $stu->section_name =$request->section_name;
         $stu->clasec_id =$request->clasec_id;
-
         $stu->save();
-        return view('home');
+        return view('layouts.homecomponent');
     }
 
     public function show($id)

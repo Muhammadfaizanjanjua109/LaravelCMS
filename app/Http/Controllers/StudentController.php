@@ -13,7 +13,9 @@ class StudentController extends Controller
 
     public function index()
     {
-        $student=student::all();
+
+
+        $student=student::all()->sortBy('id');
         return view('student.index',compact('student'));
 
     }
@@ -28,6 +30,7 @@ class StudentController extends Controller
     {
         $section = clasec::all();
         return view('student.create', compact('section'));
+
     //
 
     }
@@ -47,7 +50,7 @@ class StudentController extends Controller
         $stu->section_id =$request->section_id;
         $stu->clasec_id =2;
         $stu->save();
-        return view('home');
+        return view('layouts.homecomponent');
     }
     /**
          * Display the specified resource.

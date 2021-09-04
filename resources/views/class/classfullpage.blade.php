@@ -5,41 +5,28 @@
 
 
 
+<style>
 
-{{-- @foreach ($class as $class)
-
-
-<h1>{{$class->name}}</h1>
-
-
-
-@foreach($class->section as $section)
-
-
-
-<h3 style="color: red"><a href="">{{$section->section_name }}</a></h3>
-
-
-
-@endforeach
-@endforeach --}}
-
-
+    td{
+        font-family: 'Bitter', serif;
+    }
+</style>
 
 
 
 <table style="width:100%" class=" table table-bordered table-hover table table-sm table-striped">
     <thead>
         <tr class="bg-primary">
-            <th >Section Name</th>
             <th >Section ID</th>
+            <th >Section Name</th>
+            <th >Total Students in Sections</th>
         </tr>
     </thead>
     <tbody>
 
 
 
-        <h1>{{$class->name}}</h1>
+        <h1 style="font-family: 'Trirong', serif;" class="h1 bg-success content-center text-center bg-warning">{{$class->name}}</h1>
              {{-- @foreach($class->section as $section) --}}
 
 
@@ -47,21 +34,14 @@
 
                 @forelse ($class->section as $section)
                 <tr>
-                    <td>
-                           {{-- <h3><a href="{{route('Section.show'),section->id }}"> {{section->$id}}  </a></h3> --}}
-<a href="{{route('Section.show',$section->id)}}">{{$section->section_name}}</a>
-                   </td>
-
-
-
-
-                   <td>
-                       {{-- <h3><a href="{{route('Section.show',$section->id )}}">{{$section->section_name }}</a></h3> --}}
-
-               </td>
+                    <td>{{$section->id}}</td>
+                    <td><a href="{{route('Section.show',$section->id)}}">{{$section->section_name}}</a></td>
+                   <td>{{$section->Student->count()}}</td>
            </tr>
+
                 @empty
-                    <h3>Empty hai chahca</h3>
+            </table>
+                    <h3>Empty h</h3>
                 @endforelse
 
 

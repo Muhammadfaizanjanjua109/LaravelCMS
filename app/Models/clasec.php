@@ -18,7 +18,7 @@ class clasec extends Model
 
     public function students()
     {
-        return $this->hasMany(student::class);
+        return $this->hasManyThrough(student::class,section::class);
     }
 
 

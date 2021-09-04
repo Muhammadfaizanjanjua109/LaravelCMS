@@ -177,7 +177,7 @@
                     <div class="card-flyer">
                         <div class="text-box">
                             <div class="image-box">
-                                <img src="/images/classroom.jpg" alt="" />
+                                <img src="/images/subject.png" alt="" />
                             </div>
                             <div class="text-container">
                                 <h6>Subjects</h6>
