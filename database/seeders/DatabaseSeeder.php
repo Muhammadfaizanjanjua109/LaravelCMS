@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(userrolestable::class);
         $this->call(studentSubjectDataSeed::class);
         $this->call(reg::class);
+
+
     }
 }

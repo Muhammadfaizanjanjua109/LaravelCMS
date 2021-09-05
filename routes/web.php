@@ -4,6 +4,7 @@ use App\Http\Controllers\clasec as ControllersClasec;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\subjectController;
+use App\Http\Controllers\teacherController;
 use App\Models\clasec;
 use App\Models\subject;
 use Illuminate\Routing\RouteGroup;
@@ -61,6 +62,14 @@ Route::prefix('subject')->name('subject.')->group(function () {
 
 });
 
+///Teacher
+Route::prefix('teacher')->name('teacher.')->group(function () {
+    Route::get('/index', [teacherController::class,'index'])->name('index');
+    Route::get('/fullpage/{id}', [teacherController::class,'show'])->name('show');
+    Route::get('/create', [teacherController::class,'create'])->name('Store');
+    Route::post('/store' , [teacherController::class,'store'])->name('create');
+
+});
 
 
 

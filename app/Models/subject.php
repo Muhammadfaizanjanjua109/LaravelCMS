@@ -9,7 +9,10 @@ class subject extends Model
 {
     use HasFactory;
 
-
+    public function teacher()
+    {
+        return $this->belongsToMany(teacher::class,'subject_teachers');
+    }
 
     public function clasec()
     {

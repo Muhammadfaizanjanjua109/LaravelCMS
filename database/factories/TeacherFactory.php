@@ -1,0 +1,32 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\teacher;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class TeacherFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = teacher::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            //
+            'name' => $this->faker->name(),
+            'scale'=> $this->faker->title('jonior'|'senior'),
+            'pay'=> $this->faker->numberBetween(200,8000),
+            'subject_id'=> '1' ,
+        ];
+    }
+}

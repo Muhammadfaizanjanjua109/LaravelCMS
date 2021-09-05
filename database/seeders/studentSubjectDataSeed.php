@@ -3,7 +3,8 @@
 namespace Database\Seeders;
 use App\Models\student;
 use App\Models\subject;
-use App\Models\StudentSubject;
+use App\Models\SubjectTeacher;
+use App\Models\teacher;
 use Illuminate\Database\Seeder;
 
 class studentSubjectDataSeed extends Seeder
@@ -48,23 +49,38 @@ class studentSubjectDataSeed extends Seeder
 
 
 
+        $f = new teacher();
+        $f->name='asma';
+        $f->scale='jnr';
+        $f->pay=20000;
+        $f->save();
+
+        $f = new teacher();
+        $f->name='yasir';
+        $f->scale='snr';
+        $f->pay=40000;
+        $f->save();
+
+
+
 
        //// /studentSubject ki data entry
 
-        $f = new StudentSubject();
-        $f->Subject_id='1';
-        $f->student_id='1';
+
+        $f = new SubjectTeacher();
+        $f->subject_id='1';
+        $f->teacher_id='1';
         $f->save();
 
 
-        $f = new StudentSubject();
-        $f->Subject_id='2';
-        $f->student_id='2';
+        $f = new SubjectTeacher();
+        $f->subject_id='1';
+        $f->teacher_id='2';
         $f->save();
 
-        $f = new StudentSubject();
-        $f->Subject_id='1';
-        $f->student_id='2';
+        $f = new SubjectTeacher();
+        $f->subject_id='2';
+        $f->teacher_id='1';
         $f->save();
 
 
