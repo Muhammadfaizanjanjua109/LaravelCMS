@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\CourceOfContent;
 use App\Models\clasec;
 use App\Models\section;
 use App\Models\student;
@@ -93,6 +93,14 @@ class StudentController extends Controller
          */
      public function destroy($id)
      {
+
+     }
+
+     public function courceOfContent(Request $request)
+     {
+$a= new courceOfContent;
+$a->topic =$request->topic;
+$a->description =$request->description;
 
      }
 

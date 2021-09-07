@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\clasec;
+use App\Models\CourceOfContent;
 use App\Models\student;
 use App\Models\subject;
 use GrahamCampbell\ResultType\Success;
@@ -67,7 +68,7 @@ class subjectController extends Controller
     {
         //
 
-        $subject = subject::find($id);
+        $subject = subject::find($id)  ;
         return view('subject.subjectfullpage',compact('subject'));
 
 
@@ -86,7 +87,7 @@ class subjectController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the   resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -106,5 +107,22 @@ class subjectController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function courceOfContentAdd(Request $request)
+    {
+    $a= new courceOfContent;
+    $a->topic =$request->topic;
+    $a->description =$request->description;
+    $a->subject_id = $request->subject_id;
+    $a->save();
+    return view('layouts.homecomponent');
+
+    }
+
+    public function courceOfContentCreate($id)
+    {
+        $id=$id;
+    return view('subject.coc.create',compact('id'));
     }
 }

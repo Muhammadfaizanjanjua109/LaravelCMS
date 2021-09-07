@@ -6,6 +6,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\subjectController;
 use App\Http\Controllers\teacherController;
 use App\Models\clasec;
+use App\Models\CourceOfContent;
 use App\Models\subject;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('layouts.homecomponent');
+})->middleware('auth')->name('home');
 
 Route::get('/student/index', [StudentController::class,'index'])->name('student.index');
 Route::get('/student/fullpage//{id}', [StudentController::class,'show'])->name('Student.show');
@@ -73,6 +74,13 @@ Route::prefix('teacher')->name('teacher.')->group(function () {
 
 
 
+//////CourceOfContent
+
+// Route::prefix('coc')->name('coc')->group(function () {
+    Route::post('coc/create', [subjectController::class,'courceOfContentAdd'])->name('coc.store');
+    Route::get('coc/store/{id}', [subjectController::class,'courceOfContentCreate'])->name('coc.create');
+
+// });
 
 
 

@@ -49,5 +49,41 @@
 @endforeach
 
 
+</tr>
+
+
 </table>
+
+<br>
+
+<h4 class="h2 center text-center text-capitalize  bg-success">Course of Content</h4>
+
+@if (Auth::user()->role_id == '2')
+<button class="btn btn-primary"> <a style="color:white;margin-right:100px;" href="{{route('coc.create',$subject->id)}}">Add Content of Subject</a></button>
+@endif
+
+
+<table  style="width:100%" class="table table-bordered table-hover table table-sm table-striped">
+
+    <thead>
+        <tr>
+            <th class="bg-primary"> Number      </th>
+            <th class="bg-primary">Topic Name    </th>
+            <th class="bg-primary">Detail of Topic </th>
+        </tr>
+    </thead>
+
+<tr>
+@forelse ($subject->CourceOfContent as $faz)
+<td> {{$faz->id}}         </td>
+<td> {{$faz->topic}}         </td>
+<td> {{$faz->description}}         </td>
+</tr>
+@empty
+<h5>No course Content Available</h5>
+@endforelse
+
+</table>
+
+
 @endsection

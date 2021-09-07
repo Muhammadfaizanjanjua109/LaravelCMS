@@ -1,6 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+
+use App\Models\CourceOfContent;
 use App\Models\student;
 use App\Models\subject;
 use App\Models\SubjectTeacher;
@@ -83,6 +85,12 @@ class studentSubjectDataSeed extends Seeder
         $f->teacher_id='1';
         $f->save();
 
+        $f = new CourceOfContent();
+        $f->topic='chapter 1';
+        $f->description='loream ipsum ......';
+        $f->subject_id='1';
+
+        $f->save();
 
     }
 }

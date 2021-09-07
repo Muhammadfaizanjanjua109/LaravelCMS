@@ -24,6 +24,7 @@ table, th, td ,tr {
                 <th >Teacher Pay</th>
                 <th >Teacher Scale</th>
                 <th >Subjects teaching</th>
+
             </tr>
         </thead>
         <tbody>
@@ -37,7 +38,9 @@ table, th, td ,tr {
             <td>{{$teachers->subject->count() ?? ''}}</td>
 
 
-            </tr>
+
+
+        </tr>
             @endforeach
 
 

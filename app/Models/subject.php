@@ -31,4 +31,11 @@ class subject extends Model
     {
         return $this->hasManyThrough(student::class,section::class);
     }
+
+
+    public function CourceOfContent()
+    {
+        return $this->hasMany(CourceOfContent::class);
+    }
+
 }
