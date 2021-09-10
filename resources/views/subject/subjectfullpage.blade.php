@@ -56,7 +56,7 @@
 
 <br>
 
-<h4 class="h2 center text-center text-capitalize  bg-success">Course of Content</h4>
+<h4 class="h2 center text-center text-capitalize  bg-success">Table of Content</h4>
 
 @if (Auth::user()->role_id == '2')
 <button class="btn btn-primary"> <a style="color:white;margin-right:100px;" href="{{route('coc.create',$subject->id)}}">Add Content of Subject</a></button>
