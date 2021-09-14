@@ -16,9 +16,9 @@
 
 @forelse ($section->student as $stu)
 <tr>
-    <td>{{$stu->id}}</td>
-    <td>{{$stu->name}}</td>
-    <td>{{$stu->father_name}}</td>
+    <td><a href="{{route('Student.show',$stu->id)}}">{{$stu->id}}</a></td>
+    <td><a href="{{route('Student.show',$stu->id)}}">{{$stu->name}}</a></td>
+    <td><a href="{{route('Student.show',$stu->id)}}">{{$stu->father_name}}</a></td>
 </tr>
 @empty
 <tr>

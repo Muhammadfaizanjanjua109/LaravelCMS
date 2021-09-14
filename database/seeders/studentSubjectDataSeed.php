@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\CourceOfContent;
 use App\Models\student;
+use App\Models\StudentSubject;
 use App\Models\subject;
 use App\Models\SubjectTeacher;
 use App\Models\teacher;
@@ -90,6 +91,11 @@ class studentSubjectDataSeed extends Seeder
         $f->description='loream ipsum ......';
         $f->subject_id='1';
 
+        $f->save();
+
+        $f = new StudentSubject();
+        $f->subject_id='1';
+        $f->student_id='1';
         $f->save();
 
     }

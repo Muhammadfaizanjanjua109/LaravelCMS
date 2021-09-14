@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\CourceOfContent;
+
 use App\Models\clasec;
 use App\Models\section;
 use App\Models\student;
@@ -61,6 +61,10 @@ class StudentController extends Controller
     {
 
       //
+      $student = student::find($id);
+        return view('student.studentfullpage',compact('student'));
+
+
     }
     /**
          * Show the form for editing the specified resource.
@@ -96,13 +100,7 @@ class StudentController extends Controller
 
      }
 
-     public function courceOfContent(Request $request)
-     {
-$a= new courceOfContent;
-$a->topic =$request->topic;
-$a->description =$request->description;
 
-     }
 
 
 }

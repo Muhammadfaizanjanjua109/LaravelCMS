@@ -5,8 +5,7 @@
 
 <div class="container">
     <div class="bg-grey">
-
-        <h1 class="h1">Enter New Section</h1>
+  <h1 class="h1">Enter New Section</h1>
     </div>
        <table class="table table-striped">
           <tbody>

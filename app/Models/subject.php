@@ -29,7 +29,7 @@ class subject extends Model
 
     public function student()
     {
-        return $this->hasManyThrough(student::class,section::class);
+        return $this->belongsToMany(student::class,'student_subjects');
     }
 
 

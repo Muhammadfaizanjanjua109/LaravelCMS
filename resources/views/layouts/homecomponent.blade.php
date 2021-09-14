@@ -94,7 +94,7 @@
     <div class="container">
         <div class="row">
             <div>
-                <x-cards name='Subjects'  desciption='You can Check Subjects details from Here' href='subject.index' picture='/images/subject.png' />
+            <x-cards name='Class'  desciption='You can Check Class details from Here' href='clas.index' picture='/images/classroom.jpg' />
             </div>
 
             <div>
