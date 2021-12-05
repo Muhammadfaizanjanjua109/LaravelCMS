@@ -27,7 +27,7 @@ Route::get('/', function () {
 })->middleware('auth')->name('home');
 
 Route::get('/student/index', [StudentController::class,'index'])->name('student.index');
-Route::get('/student/fullpage//{id}', [StudentController::class,'show'])->name('Student.show');
+Route::get('/student/fullpage/{id}', [StudentController::class,'show'])->name('Student.show');
 Route::get('/student/create', [StudentController::class,'create'])->name('Student.store');
 Route::post('/student/store' , [StudentController::class,'store'])->name('student.name');
 

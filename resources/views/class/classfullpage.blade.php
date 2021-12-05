@@ -41,7 +41,7 @@
 
                 @empty
             </table>
-                    <h3>Empty h</h3>
+                    <h3>its Empty</h3>
                 @endforelse
 
 

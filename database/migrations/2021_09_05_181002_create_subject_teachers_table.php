@@ -22,6 +22,7 @@ class CreateSubjectTeachersTable extends Migration
             $table->foreign('teacher_id')->references('id')->on('teachers')->onDelete('cascade');
         });
     }
+    
 
     /**
      * Reverse the migrations.
